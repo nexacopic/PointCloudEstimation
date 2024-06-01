@@ -6,10 +6,12 @@ from cpython cimport array
 import array
 np.import_array()
 def CreatePointsFast(int w, int h, np.ndarray LiteralDepth, np.ndarray BeforeFrame):
+    print("Generating Point Cloud...")
     # loop over the image, pixel by pixel
     for y in range(0, h):
         for x in range(0, w):
             CreatePoint((x, LiteralDepth[y, x] * 750, -y), ((BeforeFrame[(y)*2, (x)*2][0]/255, BeforeFrame[(y)*2, (x)*2][1]/255, BeforeFrame[(y)*2, (x)*2][2]/255)))
+    print("Done!")
 
 
 from vispy.color import *
@@ -23,7 +25,7 @@ cdef int WinWidth = 0
 cdef int WinHeight = 0
 
 def CreatePoint(tuple point, tuple col) -> int:
-    print("Creating point " + str(point))
+    # print("Creating point " + str(point))
     points.append(point)
     colors.append(col)
     return len(colors)

@@ -13,10 +13,16 @@ import pandas as pd
 from pyntcloud import PyntCloud
 
 
-
-#model_type = "DPT_Large"     # MiDaS v3 - Large     (highest accuracy, slowest inference speed)
-model_type = "DPT_Hybrid"   # MiDaS v3 - Hybrid    (medium accuracy, medium inference speed)
-#model_type = "MiDaS_small"  # MiDaS v2.1 - Small   (lowest accuracy, highest inference speed)
+match (sys.argv[3]):
+    case "0":
+        model_type = "MiDaS_small"
+    case "1":
+        model_type = "DPT_Hybrid"
+    case "2":
+        model_type = "DPT_Large"
+    case _:
+        print("GPU Level can not be greater then 2!")
+        exit()
 
 print("Loading model " + model_type)
 midas = torch.hub.load("intel-isl/MiDaS", model_type) # load model
