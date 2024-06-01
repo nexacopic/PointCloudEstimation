@@ -27,7 +27,7 @@ Estimates a point cloud from a single image/video
 ## Installation
 
 - Install [Python](https://www.python.org/downloads/)
-- During the installer make sure to press these options
+- During the Installer make sure to select these options in Advanced Options
 - ![image](https://github.com/nexacopic/PointCloudEstimation/assets/142146272/5c9f5001-2073-4afd-9340-d9b7e3ba148b)
 - Run WindowsSetup.bat
 
