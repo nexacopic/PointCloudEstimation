@@ -35,7 +35,7 @@ Estimates a point cloud from a single image/video
 ## Usage
 
 ```batch
-echo img2points.bat [image path] [output model] [depth bias] [gpulevel]
+img2points.bat [image path] [output model] [depth bias] [gpulevel]
 --> [image path]
 --> [output model]
 --> [depth bias] // depth bias of 2 or 1 is recomended (varies from scene to scene)
