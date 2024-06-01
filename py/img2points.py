@@ -1,24 +1,33 @@
+print("Loading OpenCV")
 import cv2
-import matplotlib.pyplot as plt
+print("Loading NumPy")
 import numpy as np
+print("Loading PyTorch")
 import torch
+print("Loading sys")
 import sys
-import pointrendering
+print("Loading ViSpy")
 from vispy.color import *
+print("Loading GC")
 import gc 
+print("Loading PointMan")
 import pointman as pm
-import numpy as np
+print("Loading Pandas")
 import pandas as pd
 
+print("Loading PyntCloud")
 from pyntcloud import PyntCloud
 
 
 match (sys.argv[3]):
     case "0":
+        print("Using gpulevel 0")
         model_type = "MiDaS_small"
     case "1":
+        print("Using gpulevel 1")
         model_type = "DPT_Hybrid"
     case "2":
+        print("Using gpulevel 2")
         model_type = "DPT_Large"
     case _:
         print("GPU Level can not be greater then 2!")
@@ -37,11 +46,13 @@ print("Loading Transforms")
 midas_transforms = torch.hub.load("intel-isl/MiDaS", "transforms") # load midas transforms to use on loaded images
 
 if model_type == "DPT_Large" or model_type == "DPT_Hybrid":
+    print("Using Large Transform")
     transform = midas_transforms.dpt_transform
 else:
+    print("Using Small Transform")
     transform = midas_transforms.small_transform
 
-
+print("Loading image")
 frame = cv2.imread(sys.argv[1])
 
 # Display the resulting frame 
