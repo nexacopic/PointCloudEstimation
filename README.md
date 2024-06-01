@@ -20,8 +20,8 @@ Estimates a point cloud from a single image/video
 
 ## Screenshots
 
-![screen2](https://raw.githubusercontent.com/nexacopic/PointCloudEstimation/readme/assets/screenshot2.png?token=GHSAT0AAAAAACSMQ7UQ54FPODYFBDAJUSOSZS3EBAQ)
-![screen1](https://raw.githubusercontent.com/nexacopic/PointCloudEstimation/readme/assets/screenshot1.png?token=GHSAT0AAAAAACSMQ7UQBGEX6Y6TXXCS5J5QZS3E4VQ)
+![screen2](https://github.com/nexacopic/PointCloudEstimation/blob/readme/assets/screenshot2.png)
+![screen1]((https://github.com/nexacopic/PointCloudEstimation/blob/readme/assets/screenshot1.png)
 
 
 ## Installation
