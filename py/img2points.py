@@ -19,7 +19,7 @@ print("Loading PyntCloud")
 from pyntcloud import PyntCloud
 
 
-match (sys.argv[3]):
+match (sys.argv[4]):
     case "0":
         print("Using gpulevel 0")
         model_type = "MiDaS_small"
@@ -32,6 +32,8 @@ match (sys.argv[3]):
     case _:
         print("GPU Level can not be greater then 2!")
         exit()
+
+print("Using depth bias " + sys.argv[3])
 
 print("Loading model " + model_type)
 midas = torch.hub.load("intel-isl/MiDaS", model_type) # load model
@@ -84,7 +86,7 @@ cv2.imshow('Literal Depth', LiteralDepth)
 h = height/2
 w = width/2
 BeforeFrame = cv2.cvtColor(BeforeFrame, cv2.COLOR_BGR2RGB)
-pm.CreatePointsFast(width/2, height/2, LiteralDepth/int(sys.argv[3]), BeforeFrame)
+pm.CreatePointsFast(width/2, height/2, LiteralDepth/float(sys.argv[3]), BeforeFrame)
 pm.WinWidth = width
 pm.WinHeight = height
 
