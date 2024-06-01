@@ -4,6 +4,7 @@ import numpy as np
 cimport numpy as np
 from cpython cimport array
 import array
+cdef int pointcount = 0
 np.import_array()
 def CreatePointsFast(int w, int h, np.ndarray LiteralDepth, np.ndarray BeforeFrame):
     # loop over the image, pixel by pixel
@@ -25,6 +26,7 @@ def CreatePoint(tuple point, tuple col) -> int:
     print("Creating point " + str(point))
     points.append(point)
     colors.append(col)
+    pointcount += 1
     return len(colors)
 
 def MovePoint(int idx, tuple pos):
@@ -57,4 +59,5 @@ def BeginRendering():
     # add a colored 3D axis for orientation
     axis = visuals.XYZAxis(parent=view.scene)
     vispy.app.run()
+    print("Estimated " + str(pointcount) + " Points!")
     

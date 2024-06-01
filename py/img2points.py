@@ -79,6 +79,7 @@ cloud = PyntCloud(pd.DataFrame(
 )
 
 cloud.to_file(sys.argv[2])
+print("Saved Pointclound to \"" + sys.argv[2] + "\"")
 print("Done")
 
 pm.BeginRendering()
