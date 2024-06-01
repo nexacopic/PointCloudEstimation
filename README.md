@@ -39,7 +39,7 @@ img2points.bat [image path] [output model] [depth bias] [gpulevel]
 --> [image path]
 --> [output model]
 --> [depth bias] // depth bias of 2 or 1 is recomended (varies from scene to scene)
---> [gpulevel] // 0-2 (1 is recomended but 2 can be used on higher end systems)
+--> [gpulevel] // 0-2 (0 is for speed/low-end hardware,1 is recomended, 2 is for higher quality/high-end systems)
 
 vid2points.bat [image.png] [points.ply] // does not work at the moment
 ```
