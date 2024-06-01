@@ -1,6 +1,15 @@
 @echo off
-echo Installing packages
+echo #############################
+echo ##   Installing packages   ##
+echo #############################
 pip install -r requirements.txt
 cd py
-echo Building pointman
+echo ###########################
+echo ##   Building pointman   ##
+echo ###########################
 python setup.py build_ext --inplace
+cls
+echo ###################
+echo ##   Finished!   ##
+echo ###################
+pause
