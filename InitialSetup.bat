@@ -1,14 +1,14 @@
 @echo off
+cd %~dp0
 echo #############################
 echo ##   Installing packages   ##
 echo #############################
-pip install -r requirements.txt
+pip install --user --upgrade --force-reinstall -r requirements.txt
 cd py
 echo ###########################
 echo ##   Building pointman   ##
 echo ###########################
 python setup.py build_ext --inplace
-cls
 echo ###################
 echo ##   Finished!   ##
 echo ###################

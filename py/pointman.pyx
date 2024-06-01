@@ -59,6 +59,6 @@ def BeginRendering():
 
     # add a colored 3D axis for orientation
     axis = visuals.XYZAxis(parent=view.scene)
-    vispy.app.run()
     print("Estimated " + str(len(points)) + " Points!")
+    vispy.app.run()
     

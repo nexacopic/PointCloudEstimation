@@ -9,3 +9,4 @@ pyntcloud==0.3.1
 setuptools==70.0.0
 torch==2.3.0
 vispy==0.14.2
+timm==1.0.3
