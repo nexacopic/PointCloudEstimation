@@ -1,5 +1,10 @@
 # Output files
 out/
+py/pointman.c
+py/pointman.html
+py/pointman.cp312-win_amd64.pyd
+py/build/
+py/__pycache__/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
