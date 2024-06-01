@@ -67,7 +67,7 @@ cv2.imshow('Literal Depth', LiteralDepth)
 h = height/2
 w = width/2
 BeforeFrame = cv2.cvtColor(BeforeFrame, cv2.COLOR_BGR2RGB)
-pm.CreatePointsFast(width/2, height/2, LiteralDepth, BeforeFrame)
+pm.CreatePointsFast(width/2, height/2, LiteralDepth/int(sys.argv[3]), BeforeFrame)
 pm.WinWidth = width
 pm.WinHeight = height
 
