@@ -1,5 +1,4 @@
 from vispy.color import *
-import pointrendering
 import numpy as np
 cimport numpy as np
 from cpython cimport array
@@ -21,6 +20,7 @@ import vispy.scene
 from vispy.scene import visuals
 points = []
 colors = []
+size = []
 cdef int WinWidth = 0
 cdef int WinHeight = 0
 
@@ -28,6 +28,7 @@ def CreatePoint(tuple point, tuple col) -> int:
     # print("Creating point " + str(point))
     points.append(point)
     colors.append(col)
+    size.append(5/((point[1]*0.0005) + 1))
     return len(colors)
 
 def MovePoint(int idx, tuple pos):
@@ -49,9 +50,10 @@ def BeginRendering():
     canvas = vispy.scene.SceneCanvas(keys='interactive', show=True)
     view = canvas.central_widget.add_view()
     symbols = np.full(len(points), 'o')
+
     scatter = visuals.Markers()
     scatter.antialias = 0
-    scatter.set_data(np.array(points), edge_width=0, face_color=np.array(colors), size=10, symbol=symbols)
+    scatter.set_data(np.array(points), edge_width=0, face_color=np.array(colors), size=size, symbol=symbols)
 
     view.add(scatter)
 

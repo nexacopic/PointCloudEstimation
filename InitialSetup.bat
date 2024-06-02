@@ -3,7 +3,7 @@ cd %~dp0
 echo #############################
 echo ##   Installing packages   ##
 echo #############################
-pip install --user --upgrade --force-reinstall -r requirements.txt
+pip install --user --upgrade -r requirements.txt
 cd py
 echo ###########################
 echo ##   Building pointman   ##
