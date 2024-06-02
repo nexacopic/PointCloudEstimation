@@ -1,7 +1,7 @@
 
 # PointCloudEstimation
 
-Estimates a point cloud from a single image/video
+Estimates a point cloud from a single image/video\
 (If you downloaded builds from the releases skip to [Usage](#usage))
 
 
