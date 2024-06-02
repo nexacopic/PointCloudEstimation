@@ -2,6 +2,7 @@
 # PointCloudEstimation
 
 Estimates a point cloud from a single image/video
+(If you downloaded builds from the releases skip to [Usage](#usage))
 
 
 [![works on my machine badge](https://cdn.jsdelivr.net/gh/nikku/works-on-my-machine@v0.4.0/badge.svg)](https://github.com/nikku/works-on-my-machine)
